@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Orbital Period Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Predict the orbital period of exoplanets using advanced machine learning models based on stellar and planetary data.">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <main class="container">
+        <header>
+            <h1>Cosmic <span class="gradient-text">Predictor</span></h1>
+            <p class="subtitle">Exoplanet Orbital Period Estimation System</p>
+        </header>
+
+        <section class="glass-card">
+            <form id="prediction-form">
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="pl_orbsmax">Orbit Semi-Major Axis (Yörünge Yarı Büyük Ekseni) [au]</label>
+                        <input type="number" id="pl_orbsmax" step="any" required placeholder="e.g. 1.0">
+                    </div>
+                    <div class="input-group">
+                        <label for="st_mass">Stellar Mass (Yıldız Kütlesi) [Solar mass]</label>
+                        <input type="number" id="st_mass" step="any" required placeholder="e.g. 1.0">
+                    </div>
+                    <div class="input-group">
+                        <label for="pl_orbeccen">Eccentricity (Dışmerkezlik)</label>
+                        <input type="number" id="pl_orbeccen" step="any" required placeholder="e.g. 0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="st_rad">Stellar Radius (Yıldız Yarıçapı) [Solar radii]</label>
+                        <input type="number" id="st_rad" step="any" required placeholder="e.g. 1.0">
+                    </div>
+                    <div class="input-group">
+                        <label for="pl_rade">Planet Radius (Gezegen Yarıçapı) [Earth radii]</label>
+                        <input type="number" id="pl_rade" step="any" required placeholder="e.g. 1.0">
+                    </div>
+                    <div class="input-group">
+                        <label for="actual_value">Actual Period (Gerçek Sonuç - İsteğe Bağlı) [Days]</label>
+                        <input type="number" id="actual_value" step="any" placeholder="e.g. 365.25">
+                    </div>
+                </div>
+                
+                <button type="submit" id="predict-btn">
+                    <span class="btn-text">Calculate Period (Hesapla)</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <div class="results-comparison">
+                    <div class="result-box">
+                        <h3>Predicted Period (Tahmin Edilen)</h3>
+                        <div class="result-value">
+                            <span id="prediction-result">0.00</span>
+                            <span class="unit">Days</span>
+                        </div>
+                    </div>
+                    <div id="actual-box" class="result-box hidden">
+                        <h3>Actual Period (Gerçek Sonuç)</h3>
+                        <div class="result-value actual">
+                            <span id="actual-result">0.00</span>
+                            <span class="unit">Days</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="error-display" class="error-margin hidden">
+                    Difference (Fark): <span id="error-value">0.00%</span>
+                </div>
+                <p class="result-info">Result based on trained neural network inference.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Cosmic Predictor AI. Powered by PyTorch.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
