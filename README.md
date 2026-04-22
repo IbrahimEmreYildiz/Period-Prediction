@@ -100,4 +100,13 @@ python main.py
 Uygulama `http://127.0.0.1:8000` adresinde çalışacaktır. Ötegezegen parametrelerini girerek tahminler alabilirsiniz.
 
 ---
-*This project was developed by Antigravity as part of Advanced Agentic Coding studies.*
+## 👤 Author / Geliştirici
+
+**İbrahim Emre Yıldız**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ibrahim-emre-yıldız-549ab0256)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IbrahimEmreYildiz)
+
+---
+*This project was developed by Antigravity in collaboration with the author.*
+
